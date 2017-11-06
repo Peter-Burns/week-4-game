@@ -24,6 +24,7 @@ body{
 	background:green;
 	width:200px;
 	float:left;
+	font-size:24px;
 }
 .winLoss{
 	background:purple;
@@ -33,6 +34,7 @@ body{
 	clear:both;
 }
 .runningTotal {
-background:teal;	
-width:300px;
+	font-size:24px;
+	background:teal;	
+	width:300px;
 }
