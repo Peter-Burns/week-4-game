@@ -1,18 +1,14 @@
 var crystalValues = {
-	diamond: 5,
+	diamond: 0,
 	ruby: 0,
 	sapphire: 0,
 	emerald:0
 };
-var targetScore=19+Math.floor(100*Math.random());
-var runningTotal=0;
+var targetScore;
+var runningTotal;
 var wins=0;
 var losses=0;
-$('.crystalPic').on('click',function(){
-runningTotal+=crystalValues[this.value];
-console.log(runningTotal);
-console.log(targetScore);
-});
+
 function updateRunningTotal(){
 	$('#runningTotal').text(runningTotal);
 }
@@ -21,8 +17,31 @@ function updateTargetScore(){
 }
 function updateWinLoss(result){
 	$('#result').text('You '+result+'!');
-	$('wins').text('Wins: '+wins);
-	$('losses').text('Losses: '+losses);
+	$('#wins').text('Wins: '+wins);
+	$('#losses').text('Losses: '+losses);
+	resetGame();
 }
-updateRunningTotal();
-updateTargetScore();
+function resetGame(){
+	runningTotal=0;
+	targetScore=19+Math.floor(100*Math.random());
+	updateRunningTotal();
+	updateTargetScore();
+	for(i in crystalValues){
+	crystalValues[i]=Math.ceil(11*Math.random());
+	}
+}
+resetGame();
+$('.crystalPic').on('click',function(){
+	runningTotal+=crystalValues[this.value];
+	console.log(runningTotal);
+	console.log(targetScore);
+	if(runningTotal===targetScore){
+		wins++;
+		updateWinLoss('win');
+	}
+	if(runningTotal>targetScore){
+		losses++;
+		updateWinLoss('lose');
+	}
+	updateRunningTotal();
+});
