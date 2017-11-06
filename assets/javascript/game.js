@@ -33,8 +33,6 @@ function resetGame(){
 resetGame();
 $('.crystalPic').on('click',function(){
 	runningTotal+=crystalValues[this.value];
-	console.log(runningTotal);
-	console.log(targetScore);
 	if(runningTotal===targetScore){
 		wins++;
 		updateWinLoss('win');
