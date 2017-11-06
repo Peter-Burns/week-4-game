@@ -1,3 +1,31 @@
 div{
 	padding: 10px;
+	margin:10px;
+}
+body{
+	background:lightblue;
+}
+.gameTitle {
+	background:brown;
+	width:300px;
+}
+.instructions {
+	background:lightgrey;
+	width:400px;
+}
+.targetScore {
+	background:green;
+	width:200px;
+	float:left;
+}
+.winLoss{
+	background:purple;
+	float:left;
+}
+.crystals{
+	clear:both;
+}
+.runningTotal {
+background:teal;	
+width:300px;
 }
