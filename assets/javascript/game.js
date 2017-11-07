@@ -8,7 +8,6 @@ var targetScore;
 var runningTotal;
 var wins=0;
 var losses=0;
-
 function updateRunningTotal(){
 	$('#runningTotal').text(runningTotal);
 }
@@ -23,11 +22,11 @@ function updateWinLoss(result){
 }
 function resetGame(){
 	runningTotal=0;
-	targetScore=19+Math.floor(100*Math.random());
+	targetScore=19+Math.floor(102*Math.random());
 	updateRunningTotal();
 	updateTargetScore();
 	for(i in crystalValues){
-	crystalValues[i]=Math.ceil(11*Math.random());
+	crystalValues[i]=Math.ceil(12*Math.random());
 	}
 }
 resetGame();
