@@ -1,40 +1,38 @@
-div{
-	padding: 10px;
-	margin:10px;
-}
-p {
-	margin-bottom:10px;
+p{
+	margin:0;
+	padding:0;
 }
 h1{
 	font-size:32px;
 	color:white;
+	text-align: center;
 }
 body{
 	background:lightblue;
 }
 .gameTitle {
 	background:brown;
-	width:300px;
+	width:400px;
+	margin:0 auto;
 }
 .instructions {
 	background:lightgrey;
-	width:600px;
+	padding:2px;
 }
 .targetScore {
-	background:green;
-	width:200px;
-	float:left;
-	font-size:24px;
+	background:green;;
 }
 .winLoss{
-	background:purple;
-	float:left;
+	background:#000080;
+	color:white;
 }
 .crystals{
-	clear:both;
+	margin-top:10px;
 }
 .runningTotal {
-	font-size:24px;
 	background:teal;	
-	width:300px;
+}
+.numberBoxes>p{
+	padding:4px;
+	font-size:18px;	
 }
